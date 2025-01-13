@@ -1,25 +1,25 @@
 #!/usr/bin/python3
 import sys
 
-# Description de la fonction :
-# Cette fonction calcule le factoriel d'un nombre n donné.
-# Le factoriel d'un nombre n (noté n!) est le produit de tous les entiers de 1 à n.
-# Par exemple : 5! = 5 * 4 * 3 * 2 * 1 = 120.
+# Function Description:
+# This function calculates the factorial of a given number n.
+# The factorial of a number n (denoted as n!) is the product of all integers from 1 to n.
+# For example: 5! = 5 * 4 * 3 * 2 * 1 = 120.
 
-# Paramètres :
-# n (int) : Le nombre pour lequel on souhaite calculer le factoriel.
+# Parameters:
+# n (int): The number for which we want to calculate the factorial.
 
-# Retour :
-# int : Le résultat du factoriel de n.
+# Returns:
+# int: The result of the factorial of n.
 def factorial(n):
     if n == 0:
-        return 1  # Le factoriel de 0 est défini comme étant égal à 1.
+        return 1  # The factorial of 0 is defined as 1.
     else:
-        return n * factorial(n-1)  # Appel récursif pour calculer le factoriel.
+        return n * factorial(n-1)  # Recursive call to calculate the factorial.
 
-# Récupère le premier argument passé en ligne de commande
-# et le convertit en entier. Puis, on appelle la fonction factorial.
+# Retrieves the first argument passed via the command line
+# and converts it to an integer. Then, we call the factorial function.
 f = factorial(int(sys.argv[1]))
 
-# Affiche le résultat du calcul du factoriel.
+# Prints the result of the factorial calculation.
 print(f)
